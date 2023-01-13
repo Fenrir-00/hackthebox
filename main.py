@@ -47,8 +47,9 @@ def incorrecto():
     time.sleep(4)
 
 def menu():
-    os.system("sudo su")
     os.system("mkdir maquina")
     os.chdir("maquina")
+    var = input("introduce >> ")
+    os.system(f"nmap -sC -sS -sV -p- -vvv -Pn -n  {var} --open oN namp")
 
 menu()
